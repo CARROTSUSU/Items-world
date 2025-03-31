@@ -22,102 +22,105 @@
       flex-direction: column;
       height: 100vh;
       overflow: hidden;
+      background-image: radial-gradient(circle, #1d1d1d, #121212);
     }
 
     .container {
       background: linear-gradient(135deg, #333, #555);
       border-radius: 20px;
       padding: 40px;
-      width: 80%;
-      max-width: 800px;
-      box-shadow: 0 4px 30px rgba(0, 255, 0, 0.1);
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 4px 40px rgba(0, 255, 0, 0.15);
       text-align: center;
       position: relative;
+      animation: neonGlow 3s ease-in-out infinite alternate;
     }
 
     h1 {
       font-size: 3rem;
       color: #00ff00;
-      text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
-      margin-bottom: 20px;
+      text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+      margin-bottom: 30px;
     }
 
     .item-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .item-table th, .item-table td {
-      padding: 15px;
+      padding: 20px;
       text-align: center;
       border: 2px solid #00ff00;
     }
 
     .item-table th {
-      background-color: #333;
+      background-color: #222;
       color: #00ff00;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       text-transform: uppercase;
       letter-spacing: 1px;
+      text-shadow: 0 0 10px #00ff00;
     }
 
     .item-table td {
-      background-color: #222;
+      background-color: #333;
       font-size: 1.1rem;
+      color: #fff;
     }
 
-    .item-table .btn {
+    .item-table .btn, .item-table a {
       background: #00ff00;
       color: #121212;
       border: none;
-      padding: 12px 25px;
+      padding: 15px 30px;
       font-size: 1.2rem;
       border-radius: 30px;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: all 0.3s ease;
       text-transform: uppercase;
       letter-spacing: 1px;
+      display: inline-block;
+      text-decoration: none;
     }
 
-    .item-table .btn:hover {
+    .item-table .btn:hover, .item-table a:hover {
       background: #009900;
       box-shadow: 0 0 20px #00ff00;
       transform: scale(1.05);
     }
 
-    .item-table .btn:active {
+    .item-table .btn:active, .item-table a:active {
       transform: scale(0.95);
     }
 
     /* Futuristic Neon Glow Animation */
     @keyframes neonGlow {
       0% {
-        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+        text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
       }
       50% {
-        text-shadow: 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
+        text-shadow: 0 0 30px #00ff00, 0 0 50px #00ff00, 0 0 70px #00ff00;
       }
       100% {
-        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+        text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
       }
-    }
-
-    .container {
-      animation: neonGlow 2s infinite alternate;
     }
 
     /* Responsiveness for mobile */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
-      .item-table td {
+      .item-table th, .item-table td {
         font-size: 1rem;
+        padding: 12px;
       }
 
-      .item-table .btn {
+      .item-table .btn, .item-table a {
         padding: 10px 20px;
         font-size: 1rem;
       }
@@ -139,23 +142,22 @@
         </tr>
       </thead>
       <tbody>
-  <tr>
-    <td>Grass</td>
-    <td>200/1</td>
-    <td>
-      <a href="https://carrotsusu.github.io/Grass/" class="btn">TODO</a>
-    </td>
-  </tr>
-  <tr>
-    <td>ATM</td>
-    <td>4000/20</td>
-    <td>
-      <button class="btn" onclick="buyItem('ATM', 4000)">Buy</button>
-      <button class="btn" onclick="sellItem('ATM', 4000)">Sell</button>
-    </td>
-  </tr>
-</tbody>
-      
+        <tr>
+          <td>Grass</td>
+          <td>200/1</td>
+          <td>
+            <a href="https://carrotsusu.github.io/Grass/" class="btn">TODO</a>
+          </td>
+        </tr>
+        <tr>
+          <td>ATM</td>
+          <td>4000/20</td>
+          <td>
+            <button class="btn" onclick="buyItem('ATM', 4000)">Buy</button>
+            <button class="btn" onclick="sellItem('ATM', 4000)">Sell</button>
+          </td>
+        </tr>
+      </tbody>
     </table>
 
   </div>
